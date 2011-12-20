@@ -1766,16 +1766,15 @@ a.menu:after, .dropdown-toggle:after {
 .breadcrumb .active a {
   color: #404040;
 }
-.hero-unit {
-	overflow: hidden;
-	background: url(images/background-hero2.png) no-repeat center 20px;	
+.hero-unit{
+  overflow: hidden;
+  background: url(images/background-hero2.png) no-repeat center 20px;		
   background-color: #f5f5f5;
   margin-bottom: 10px;
   padding: 60px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  border-radius: 6px;
-  
+  border-radius: 6px; 
 }
 .hero-unit logo {
   padding-right:20px;
@@ -2477,8 +2476,46 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
-
+/* ---------------------- */
 #my-modal {
-  width:400px;
-  
+  width:400px; 
+}
+
+.shadow, .home-concert {
+  padding: 14px;
+  border: 1px solid #f0f0f0;
+  border-bottom: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* ---------------------- */
+.hero-doctor{
+  overflow: hidden;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 10px 60px 10px 60px; /* TRBL */
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; 
+}
+.hero-doctor ul{
+	list-style-type: none;
+}
+.actions {
+	padding: 17px 20px 18px 150px;
+}
+.payments {
+  background: #f5f5f5;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 17px 20px 18px 150px;
+  border-bottom: 1px solid #ddd;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+.payments #signupBtn {
+	margin-bottom:5px;
 }

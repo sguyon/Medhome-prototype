@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Medhome : your doctor, in your pocket</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le javascript -->
+     <script src="js/jquery-1.7.min.js"></script>
+     <script src="js/bootstrap-modal.js"></script>
+     <script src="js/bootstrap-alerts.js"></script>
+     
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="index.html"><img src="images/medhome-20.png"> Medhome</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#contact">Contact</a></li>            
+          </ul>
+		  <form class="pull-right" id="search">
+			<input class="medium" type="text" placeholder="e-mail" length="10">
+			<input class="medium" type="password" placeholder="*******" size="10">
+			<button class="btn" disabled="">Login</button>
+		  </form>	
+		</div>
+      </div>
+     </div>
+    </div>
+
+	<div class='container'>
+		
+	  <h1>Create your account</h1>
+
+	
+      <div class="hero-doctor">
+		<div class="row">
+	    <div class="span10 column" id="right">
+	      <form action="payment.html" method="post" id="signup">
+	        <fieldset>
+	          <legend>New account</legend>
+	          <div class="clearfix">
+	            <label for="email">E-mail</label>
+	            <div class="input">
+	              <input class="xlarge" id="email" name="email" size="30" type="text" placeholder="adress@example.com" />
+	            </div>
+			  </div>
+	          <div class="clearfix">
+	            <label for="password">Password</label>
+	            <div class="input">
+	              <input class="large" id="password" name="password" size="30" type="password" placeholder="***********" />
+	            </div>
+			  </div>
+	          <div class="clearfix">
+	            <label for="password2">Confirm password</label>
+	            <div class="input">
+	              <input class="large" id="password2" name="password2" size="30" type="password" placeholder="***********" />
+	            </div>
+			  </div>
+			</fieldset>
+			<fieldset>
+				<legend>Details</legend>
+	          <div class="clearfix">
+	            <label for="firstname">First name</label>
+	            <div class="input">
+	              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" placeholder="" />
+	            </div>
+			  </div>
+	          <div class="clearfix">
+	            <label for="lastname">Last name:</label>
+	            <div class="input">
+	              <input class="xlarge" id="lastname" name="lastname" size="30" type="text" placeholder="" />
+	            </div>
+			  </div>
+	          <div class="clearfix">
+	            <label for="month">Birth date:</label>
+				<div class="input">
+           		<div class="inline-inputs">
+
+
+					<select class="mini" name="month" id="month">
+					                <option>Jan</option>
+									<option>Feb</option>
+									<option>Mar</option>
+									<option>Apr</option>
+									<option>May</option>
+									<option>Jun</option>
+									<option>Jul</option>
+									<option>Aug</option>
+									<option>Sep</option>
+									<option>Oct</option>
+									<option>Nov</option>
+									<option>Dec</option>
+					              </select>
+					<select class="mini" name="day" id="day">
+					                <option>1</option>
+					                <option>2</option>
+					                <option>3</option>
+					                <option>4</option>
+					                <option>5</option>
+					                <option>6</option>
+					                <option>7</option>
+					                <option>8</option>
+					                <option>9</option>
+					                <option>10</option>	
+					                <option>11</option>
+					                <option>12</option>
+					                <option>13</option>
+					                <option>14</option>
+					                <option>15</option>
+					                <option>16</option>
+					                <option>17</option>
+					                <option>18</option>
+					                <option>19</option>
+					                <option>20</option>					
+					                <option>21</option>
+					                <option>22</option>
+					                <option>23</option>
+					                <option>24</option>
+					                <option>25</option>
+					                <option>26</option>
+					                <option>27</option>
+					                <option>28</option>
+					                <option>29</option>
+					                <option>30</option>																																						
+					                <option>31</option>																																											
+					              </select>
+					<select class="small" name="year" id="year">
+						<option>1901</option>
+						<option>1902</option>
+						<option>1903</option>
+						<option>1904</option>
+						<option>1905</option>
+						<option>1906</option>
+						<option>1907</option>
+						<option>1908</option>
+						<option>1909</option>
+						<option>1910</option>
+						<option>1911</option>
+						<option>1912</option>
+						<option>1913</option>
+						<option>1914</option>
+						<option>1915</option>
+						<option>1916</option>
+						<option>1917</option>
+						<option>1918</option>
+						<option>1919</option>
+						<option>1920</option>
+						<option>1921</option>
+						<option>1922</option>
+						<option>1923</option>
+						<option>1924</option>
+						<option>1925</option>
+						<option>1926</option>
+						<option>1927</option>
+						<option>1928</option>
+						<option>1929</option>
+						<option>1930</option>
+						<option>1931</option>
+						<option>1932</option>
+						<option>1933</option>
+						<option>1934</option>
+						<option>1935</option>
+						<option>1936</option>
+						<option>1937</option>
+						<option>1938</option>
+						<option>1939</option>
+						<option>1940</option>
+						<option>1941</option>
+						<option>1942</option>
+						<option>1943</option>
+						<option>1944</option>
+						<option>1945</option>
+						<option>1946</option>
+						<option>1947</option>
+						<option>1948</option>
+						<option>1949</option>
+						<option>1950</option>
+						<option>1951</option>
+						<option>1952</option>
+						<option>1953</option>
+						<option>1954</option>
+						<option>1955</option>
+						<option>1956</option>
+						<option>1957</option>
+						<option>1958</option>
+						<option>1959</option>
+						<option>1960</option>
+						<option>1961</option>
+						<option>1962</option>
+						<option>1963</option>
+						<option>1964</option>
+						<option>1965</option>
+						<option>1966</option>
+						<option>1967</option>
+						<option>1968</option>
+						<option>1969</option>
+						<option>1970</option>
+						<option>1971</option>
+						<option>1972</option>
+						<option>1973</option>
+						<option>1974</option>
+						<option>1975</option>
+						<option>1976</option>
+						<option>1977</option>
+						<option>1978</option>
+						<option>1979</option>
+						<option>1980</option>
+						<option selected>1981</option>
+						<option>1982</option>
+						<option>1983</option>
+						<option>1984</option>
+						<option>1985</option>
+						<option>1986</option>
+						<option>1987</option>
+						<option>1988</option>
+						<option>1989</option>
+						<option>1990</option>
+						<option>1991</option>
+						<option>1992</option>
+						<option>1993</option>
+						<option>1994</option>
+						<option>1995</option>
+						<option>1996</option>
+						<option>1997</option>
+						<option>1998</option>
+						<option>1999</option>
+						<option>2000</option>
+		              </select>
+	            	</div>
+					</div>
+			  </div>
+	          <div class="clearfix">
+	            <label for="gender">Gender</label>
+	            <div class="input">
+				 <ul class="inputs-list">
+		                <li>
+		                  <label>
+		                    <input type="radio" name="gender" value="male" />
+		                    <span>Male</span>
+		                  </label>
+		                </li>
+						<li>
+		                  <label>
+		                    <input type="radio" name="gender" value="female" />
+		                    <span>Female</span>
+		                  </label>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<div class="actions">
+					 <input type="submit" id="signupBtn" value="Continue &rarr;" class="btn large">	      			
+				</div>
+	          </fieldset>				 
+			  </form>
+	            </div>
+
+	
+
+
+			  
+			    <div class="span4 column" id="right">
+					<h3>Your selection:</h3>
+
+					<img class="thumbnail" src="http://placehold.it/170x200" alt="">
+					<h5>Doctor John Doe</h5>
+					<p>Status : <strong>online</strong></p>
+					<p>You will be able to start your consultation with this doctor as soon as you finish the registration process.</p>
+				</div>
+	    </div>
+
+      </div>
+
+      <footer>
+        <p>&copy; Medhome 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Medhome : your doctor, in your pocket</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le javascript -->
+     <script src="js/jquery-1.7.min.js"></script>
+     <script src="js/bootstrap-modal.js"></script>
+     <script src="js/bootstrap-alerts.js"></script>
+     
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="index.html"><img src="images/medhome-20.png"> Medhome</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#contact">Contact</a></li>            
+          </ul>
+		  <form class="pull-right" id="search">
+			<input class="medium" type="text" placeholder="e-mail" length="10">
+			<input class="medium" type="password" placeholder="*******" size="10">
+			<button class="btn" disabled="">Login</button>
+		  </form>	
+		</div>
+      </div>
+     </div>
+    </div>
+
+	<div class='container'>
+		
+	  <h1>Select your formula</h1>
+
+	
+      <div class="hero-doctor">
+		<div class="row">
+	    <div class="span10 column" id="left">
+		<p>
+			You are just one step away from a consultation with doctor <strong>John Doe</strong>.<br/>
+			Choose your payment formula and start right away your diagnosis !
+			<form action="gateway.html">
+			<fieldset>
+			  <div class="clearfix">
+	            <label for="plan">Formula :</label>
+	            <div class="input">
+			<select class="xlarge" name="plan" id="plan">
+			                <option>10 minutes consultation - 100RMB</option>
+			                <option>1 day subscription - 300RMB</option>
+			                <option>1 week subscription - 500RMB</option>
+			              </select>
+				</div>
+			  </div> <!-- clearfix -->
+			  <div class="clearfix">
+	            <label for="price">Payment :</label>
+	            <div class="input">
+					 <ul class="inputs-list">
+			                <li>
+			                  <label>
+			                    <input type="radio" name="gender" value="male" checked />
+			                    <span>15 USD (100 RMB) - using Paypal</span>
+			                  </label>
+			                </li>
+							<li>
+			                  <label>
+			                    <input type="radio" name="gender" value="female" />
+			                    <span>100 RMB (15 USD) - using Alipay</span>
+			                  </label>
+							</li>
+						</ul>
+					</div>
+			  </div> <!-- clearfix -->
+			</fieldset>
+				<div class="payments">
+					 <input type="submit" id="signupBtn" value="Buy now &rarr;" class="btn large success">	      			
+					<br/><img src="images/cartes_3.png">
+				</div>	      
+			  </form>
+			<h4>10 minutes consultation</h4>
+			<ul>
+				<li>If you just want to be reassured, use this economic formula.</li>
+				<li><strong>pros</strong>: enough for a minor problem</li>
+				<li><strong>cons</strong>: will need to pay again for a follow-up</li>
+			</ul>			
+
+			<h4>1 day subscription</h4>
+			<ul>
+				<li>Use this to ensure to have one day follow-up with a doctor</li>
+				<li><strong>pros</strong>: enough for a minor problem</li>
+				<li><strong>cons</strong>: will need to pay again the days after</li>
+			</ul>
+			
+			<h4>1 week subscription</h4>
+			<p>
+				
+				<ul>
+					<li>Use this to ensure to have your sickness followed day to day<br/>by the doctor, and prevent any problems</li>
+					<li><strong>pros</strong>: doctor can follow your recover, adapt medication accordingly</li>
+				</ul>
+
+			</p>
+			<h4>long-term subscription</h4>
+			<ul>
+				<li>For long-term subscription, please <a href="contact.html">contact our sales team</a>.</li>
+			</ul>
+       </div>
+
+	
+			  
+			    <div class="span4 column" id="right">
+					<h4>Your selection:</h4>
+
+					<img class="thumbnail" src="http://placehold.it/170x200" alt="">
+					<h5>Doctor John Doe</h5>
+					<p>Status : <strong>online</strong></p>
+					<p>You will be able to start your consultation with this doctor as soon as you finish the registration process.</p>
+				</div>
+	    </div>
+
+      </div>
+
+      <footer>
+        <p>&copy; Medhome 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

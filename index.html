@@ -13,7 +13,7 @@
     <![endif]-->
 
     <!-- Le javascript -->
-     <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+     <script src="js/jquery-1.7.min.js"></script>
      <script src="js/bootstrap-modal.js"></script>
      <script src="js/bootstrap-alerts.js"></script>
      
@@ -37,21 +37,27 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#"><img src="images/medhome-20.png"> Medhome</a>
+          <a class="brand" href="index.html"><img src="images/medhome-20.png"> Medhome</a>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About us</a></li>
             <li><a href="#partners">Partners</a></li>
             <li><a href="#contact">Contact</a></li>            
           </ul>
-        </div>
+		  <form class="pull-right" id="search">
+			<input class="medium" type="text" placeholder="e-mail" length="10">
+			<input class="medium" type="password" placeholder="*******" size="10">
+			<button class="btn" disabled="">Login</button>
+		  </form>	
+		</div>
       </div>
+     </div>
     </div>
 
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
+      <div class="hero-unit home">
         <img src="images/medhome-114.png" class="logo" align="left">
         <h1>&nbsp;Your doctor,<br/>&nbsp;in your pocket</h1>
         <p>&nbsp;</p>
@@ -61,10 +67,13 @@
         </p>
         <p>&nbsp;</p>        
         <p>
-          <a data-controls-modal="my-modal" data-backdrop="static" href="#">
-            <img src="images/download.png">
+          <a data-controls-modal="my-modal" data-backdrop="static" href="#" class="btn large">
+            <!-- <img src="images/download.png" valign="middle"> -->
+		  Download the iPhone app
           </a>
+		  or <a href="doctors.html" class="btn large primary">Start a consultation now !</a>
         </p>        
+
       </div>
 
       <!-- Example row of columns -->
@@ -72,7 +81,7 @@
         <div class="span6">
           <h2>Doctors you can <em>trust</em></h2>
           <p>Our doctors are trained in top medecine school, and are registered to official doctor association.</p>
-          <p><a class="btn" href="#">Meet our doctors &raquo;</a></p>
+          <p><a class="btn" href="doctors.html">Meet our doctors &raquo;</a></p>
         </div>
         <div class="span5">
           <h2>Fast diagnosis</h2>
