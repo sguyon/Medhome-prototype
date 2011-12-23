@@ -76,24 +76,32 @@
 			              </select>
 				</div>
 			  </div> <!-- clearfix -->
-			  <div class="clearfix">
+			  <div class="clearfix" id="paymentlist">
 	            <label for="price">Payment :</label>
 	            <div class="input">
 					 <ul class="inputs-list">
 			                <li>
 			                  <label>
-			                    <input type="radio" name="gender" value="male" checked />
+			                    <input type="radio" name="payment" value="paypal" checked />
 			                    <span>15 USD (100 RMB) - using Paypal</span>
 			                  </label>
 			                </li>
 							<li>
 			                  <label>
-			                    <input type="radio" name="gender" value="female" />
+			                    <input type="radio" name="payment" value="alipay" />
 			                    <span>100 RMB (15 USD) - using Alipay</span>
 			                  </label>
 							</li>
+							<li>
+			                  <label>
+			                    <input type="radio" name="payment" value="coupon" />
+			                    <span>Use prepaid coupon :</span>
+								<input class="small" type="text" placeholder="coupon code">
+			                  </label>
+			                </li>  
 						</ul>
 					</div>
+					
 			  </div> <!-- clearfix -->
 			</fieldset>
 				<div class="payments">
@@ -135,7 +143,7 @@
 			    <div class="span4 column" id="right">
 					<h4>Your selection:</h4>
 
-					<img class="thumbnail" src="http://placehold.it/170x200" alt="">
+					<img class="thumbnail" src="http://placehold.it/170x200" width="170" height="200" alt="">
 					<h5>Doctor John Doe</h5>
 					<p>Status : <strong>online</strong></p>
 					<p>You will be able to start your consultation with this doctor as soon as you finish the registration process.</p>

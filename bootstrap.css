@@ -2526,3 +2526,6 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 	padding-top:10px;
 	margin-top:10px;
 }
+#paymentlist li {
+	margin-bottom:7px;
+}
