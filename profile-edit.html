@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Medhome : your doctor, in your pocket</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+ 
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le javascript -->
+     <script src="js/jquery-1.7.min.js"></script>
+     <script src="js/bootstrap-modal.js"></script>
+     <script src="js/bootstrap-alerts.js"></script>
+     
+    <!-- Le styles -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+  <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+      .container {
+        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+      }
+
+      /* The white background content wrapper */
+      .container > .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+                border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+      /* Styles you shouldn't keep as they are for displaying this base example only */
+      .content .span10,
+      .content .span4 {
+        min-height: 500px;
+      }
+      /* Give a quick and non-cross-browser friendly divider */
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 19px;
+        border-left: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+	  .alert-message{
+		margin-right:10px;
+	}
+	.topbar{
+		
+	}
+    </style>
+
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="index.html"><img src="images/medhome-20.png"> Medhome</a>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+			<li><a href="contact.html">Contact</a></li>            
+          </ul>
+		  <div class="pull-right">
+          	<ul class="nav">
+				<li><a href="main.html">» Sacha Guyon</a></li>
+				<li class="active"><a href="profile.html">Profile</a></li>		
+				<li><a href="main.html">Consultations</a></li>							
+				<li><a href="main.html">Logout &rarr;</a></li>											
+			</ul>
+		  </div>
+		</div>
+      </div>
+     </div>
+    </div>
+
+
+	    <div class="container">
+
+	      <div class="content">
+	        <div class="page-header">
+	          <h1>Profile<small></small></h1>
+	        </div>
+	        <div class="row">
+	          <div id="maincontent" class="span10"> <!-- main content -->
+
+				<ul class="tabs">
+				  <li><a href="profile.html">View profile</a></li>
+				  <li class="active"><a href="profile-edit.html">Edit profile</a></li>
+				  <li><a href="#">Modify password</a></li>
+				  <li><a href="#">Update payment</a></li>
+				</ul>
+				
+		      <form action="profile-edit.html" id="signup">
+				<fieldset>
+					<legend>Basics</legend>
+		          <div class="clearfix">
+		            <label for="firstname">First name</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" value="Sacha" />
+		            </div>
+				  </div>
+		          <div class="clearfix">
+		            <label for="lastname">Last name:</label>
+		            <div class="input">
+		              <input class="xlarge" id="lastname" name="lastname" size="30" type="text" value="Guyon" />
+		            </div>
+				  </div>
+		          <div class="clearfix">
+		            <label for="month">Birth date:</label>
+					<div class="input">
+	           		<div class="inline-inputs">
+
+
+						<select class="mini" name="month" id="month">
+						                <option>Jan</option>
+										<option>Feb</option>
+										<option selected>Mar</option>
+										<option>Apr</option>
+										<option>May</option>
+										<option>Jun</option>
+										<option>Jul</option>
+										<option>Aug</option>
+										<option>Sep</option>
+										<option>Oct</option>
+										<option>Nov</option>
+										<option>Dec</option>
+						              </select>
+						<select class="mini" name="day" id="day">
+						                <option>1</option>
+						                <option>2</option>
+						                <option>3</option>
+						                <option>4</option>
+						                <option>5</option>
+						                <option>6</option>
+						                <option>7</option>
+						                <option>8</option>
+						                <option>9</option>
+						                <option>10</option>	
+						                <option>11</option>
+						                <option>12</option>
+						                <option>13</option>
+						                <option>14</option>
+						                <option>15</option>
+						                <option>16</option>
+						                <option>17</option>
+						                <option>18</option>
+						                <option>19</option>
+						                <option>20</option>					
+						                <option selected>21</option>
+						                <option>22</option>
+						                <option>23</option>
+						                <option>24</option>
+						                <option>25</option>
+						                <option>26</option>
+						                <option>27</option>
+						                <option>28</option>
+						                <option>29</option>
+						                <option>30</option>																																						
+						                <option>31</option>																																											
+						              </select>
+						<select class="small" name="year" id="year">
+							<option>1901</option>
+							<option>1902</option>
+							<option>1903</option>
+							<option>1904</option>
+							<option>1905</option>
+							<option>1906</option>
+							<option>1907</option>
+							<option>1908</option>
+							<option>1909</option>
+							<option>1910</option>
+							<option>1911</option>
+							<option>1912</option>
+							<option>1913</option>
+							<option>1914</option>
+							<option>1915</option>
+							<option>1916</option>
+							<option>1917</option>
+							<option>1918</option>
+							<option>1919</option>
+							<option>1920</option>
+							<option>1921</option>
+							<option>1922</option>
+							<option>1923</option>
+							<option>1924</option>
+							<option>1925</option>
+							<option>1926</option>
+							<option>1927</option>
+							<option>1928</option>
+							<option>1929</option>
+							<option>1930</option>
+							<option>1931</option>
+							<option>1932</option>
+							<option>1933</option>
+							<option>1934</option>
+							<option>1935</option>
+							<option>1936</option>
+							<option>1937</option>
+							<option>1938</option>
+							<option>1939</option>
+							<option>1940</option>
+							<option>1941</option>
+							<option>1942</option>
+							<option>1943</option>
+							<option>1944</option>
+							<option>1945</option>
+							<option>1946</option>
+							<option>1947</option>
+							<option>1948</option>
+							<option>1949</option>
+							<option>1950</option>
+							<option>1951</option>
+							<option>1952</option>
+							<option>1953</option>
+							<option>1954</option>
+							<option>1955</option>
+							<option>1956</option>
+							<option>1957</option>
+							<option>1958</option>
+							<option>1959</option>
+							<option>1960</option>
+							<option>1961</option>
+							<option>1962</option>
+							<option>1963</option>
+							<option>1964</option>
+							<option>1965</option>
+							<option>1966</option>
+							<option>1967</option>
+							<option>1968</option>
+							<option>1969</option>
+							<option>1970</option>
+							<option>1971</option>
+							<option>1972</option>
+							<option>1973</option>
+							<option>1974</option>
+							<option>1975</option>
+							<option>1976</option>
+							<option>1977</option>
+							<option>1978</option>
+							<option>1979</option>
+							<option>1980</option>
+							<option selected>1981</option>
+							<option>1982</option>
+							<option selected>1983</option>
+							<option>1984</option>
+							<option>1985</option>
+							<option>1986</option>
+							<option>1987</option>
+							<option>1988</option>
+							<option>1989</option>
+							<option>1990</option>
+							<option>1991</option>
+							<option>1992</option>
+							<option>1993</option>
+							<option>1994</option>
+							<option>1995</option>
+							<option>1996</option>
+							<option>1997</option>
+							<option>1998</option>
+							<option>1999</option>
+							<option>2000</option>
+			              </select>
+		            	</div>
+						</div>
+				  </div>
+		          <div class="clearfix">
+		            <label for="gender">Gender</label>
+		            <div class="input">
+					 <ul class="inputs-list">
+			                <li>
+			                  <label>
+			                    <input type="radio" checked name="gender" value="male" />
+			                    <span>Male</span>
+			                  </label>
+			                </li>
+							<li>
+			                  <label>
+			                    <input type="radio" name="gender" value="female" />
+			                    <span>Female</span>
+			                  </label>
+							</li>
+						</ul>
+					</div>
+					</fieldset>
+					<fieldset>
+					<legend>Medical history</legend>
+			          <div class="clearfix">
+			            <label for="firstname">Question 1</label>
+			            <div class="input">
+			              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+			            </div>
+					</div>
+			          <div class="clearfix">
+			            <label for="firstname">Question 2</label>
+			            <div class="input">
+			              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+			            </div>
+					</div>
+				</fieldset>
+				<fieldset>
+				<legend>Drug history</legend>
+		          <div class="clearfix">
+		            <label for="firstname">Question 1</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+		            </div>
+				</div>
+		          <div class="clearfix">
+		            <label for="firstname">Question 2</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+		            </div>
+				</div>
+				</fieldset>
+				<fieldset>
+				<legend>Allergies</legend>
+		          <div class="clearfix">
+		            <label for="firstname">I am allergic to</label>
+				  <div class="input">
+					<ul class="inputs-list">
+					                <li>
+					                  <label>
+					                    <input type="checkbox" name="optionsCheckboxes" value="option1">
+					                    <span>Nuts</span>
+					                  </label>
+					                </li>
+					                <li>
+					                  <label>
+					                    <input type="checkbox" name="optionsCheckboxes" value="option2">
+					                    <span>Dust</span>
+					                  </label>
+					                </li>
+					                <li>
+					                  <label>
+					                    <input type="checkbox" name="optionsCheckboxes" value="option2">
+					                    <span>Pot</span>
+					                  </label>
+					                </li>
+					                <li>
+					                  <label class="disabled">
+					                    <input type="checkbox" name="optionsCheckboxes" value="option2" disabled="">
+					                    <span>Everything</span>
+					                  </label>
+					                </li>
+					              </ul>
+				   </div>
+				  </div>
+		          <div class="clearfix">
+		            <label for="firstname">Any other allergies ?</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+		            </div>
+				</div>				
+				</fieldset>
+				<fieldset>
+				<legend>Social history</legend>
+		          <div class="clearfix">
+		            <label for="firstname">Question 1</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+		            </div>
+				</div>
+		          <div class="clearfix">
+		            <label for="firstname">Question 2</label>
+		            <div class="input">
+		              <input class="xlarge" id="firstname" name="firstname" size="30" type="text" />
+		            </div>
+				</div>
+				</fieldset>
+					
+					
+					
+					
+					
+					<div class="actions">
+						 <input type="submit" id="signupBtn" value="Update profile" class="btn large">	      			
+					</div>
+		          </fieldset>				 
+				  </form>
+
+	          </div> <!-- /main content -->
+	    
+	
+	
+	
+	      	<div id="sidebar" class="span4"> <!-- side bar -->
+		
+				<h4>Our doctors:</h4>
+				
+				<h5><span class="label success">online</span> Oliver Tang</h5>
+				<div class="row">
+					<div class="span1">
+						<img src="images/expert.png" width="40" height="60" alt="">
+					</div>
+					<div class="span3">
+						<p>General practitioner</p>
+						<a href="start" class="btn info small">Start consultation</a>	
+					</div>
+				</div>
+				
+				<h5><span class="label">offline</span> John Doe</h5>
+				<div class="row">
+					<div class="span1">
+						<img src="images/expert.png" width="40" height="60" alt="">
+					</div>
+					<div class="span3">
+						<p>General practitioner</p>
+						<a href="start" class="btn  small">Start consultation</a>
+					</div>
+				</div>
+
+				<h5><span class="label">offline</span> Michael Johnson</h5>
+				<div class="row">
+					<div class="span1">
+						<img src="images/expert.png" width="40" height="60" alt="">
+					</div>
+					<div class="span3">
+						<p>General practitioner</p>
+						<a href="start" class="btn  small">Start consultation</a>
+					</div>
+				</div>				
+
+	          </div> <!-- /side bar -->
+	        </div>
+	      </div>
+
+      <footer>
+        <p>&copy; Medhome 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
