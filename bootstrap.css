@@ -2519,3 +2519,10 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .payments #signupBtn {
 	margin-bottom:5px;
 }
+.container #claims #title {
+	padding-top:10px;
+}
+.container #claims  {
+	padding-top:10px;
+	margin-top:10px;
+}

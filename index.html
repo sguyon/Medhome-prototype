@@ -40,9 +40,8 @@
           <a class="brand" href="index.html"><img src="images/medhome-20.png"> Medhome</a>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#contact">Contact</a></li>            
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>            
           </ul>
 		  <form class="pull-right" id="search">
 			<input class="medium" type="text" placeholder="e-mail" length="10">
@@ -77,21 +76,43 @@
       </div>
 
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="span6">
+      <div class="row" id="claims">
+        <div class="span6" id="claim1">
           <h2>Doctors you can <em>trust</em></h2>
-          <p>Our doctors are trained in top medecine school, and are registered to official doctor association.</p>
-          <p><a class="btn" href="doctors.html">Meet our doctors &raquo;</a></p>
+		  <div class="row">
+			<div class="span2" id="pic">
+				<img src="images/expert.png">
+			</div>
+			<div class="span4" id="title">
+	          <p>Our doctors are trained in top medecine school, and are registered to official doctor association.</p>
+	          <p><a class="btn" href="doctors.html">Meet our doctors &raquo;</a></p>
+			</div>
+		  </div>
         </div>
-        <div class="span5">
+        <div class="span5" id="claim2">
           <h2>Fast diagnosis</h2>
-           <p>Get a diagnosis in 10 minutes, no need to loose half a day going to the hospital</p>
-          <p><a class="btn" href="#">View demo &raquo;</a></p>
+		  <div class="row">
+			<div class="span2" id="pic">
+				<img src="http://placehold.it/72x96" width="72" height="96"> 
+			</div>
+			<div class="span3" id="title">
+           <p>Get a diagnosis in 10 minutes, 20x faster than hospital </p>
+          <p><a class="btn" data-controls-modal="demo-modal" data-backdrop="static" href="#" >View demo &raquo;</a></p>
+		</div>
+	  </div>
        </div>
-        <div class="span5">
+        <div class="span5" id="claim3">
           <h2>Secure and confidential</h2>
+		  <div class="row">
+			<div class="span2" id="pic">
+				<img src="http://placehold.it/" width="72" height="96"> 
+			</div>
+			<div class="span3" id="title">
           <p>All your personal datas are kept in a secure server, accessible only by you and your doctor.</p>
           <p><a class="btn" href="#">About us &raquo;</a></p>
+		</div>
+	  </div>
+
         </div>
       </div>
 
@@ -118,5 +139,20 @@
         </p>
        </div>
      </div>
+
+    <div id="demo-modal" class="modal hide fade">
+       <div class="modal-header">
+         <a href="#" class="close">&times;</a>
+         <h3>Medhome demo video</h3>
+       </div>
+       <div class="modal-body">
+		<div class="span4">
+		<img src="http://placehold.it/72x96" width="480" height="360"> 
+        <p>
+		  <a href="doctors.html" class="btn large primary">Start a consultation</a>
+        </p>
+       </div>
+     </div>
+
   </body>
 </html>
