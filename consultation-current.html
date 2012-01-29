@@ -17,6 +17,9 @@
      <script src="js/jquery-1.7.min.js"></script>
      <script src="js/bootstrap-modal.js"></script>
      <script src="js/bootstrap-alerts.js"></script>
+     <script src="js/bootstrap-twipsy.js"></script>
+     <script src="js/bootstrap-popover.js"></script>
+	 <script src="js/consultation.js"></script>
      
     <!-- Le styles -->
     <link href="bootstrap.css" rel="stylesheet">
@@ -85,15 +88,37 @@
 	.input{
 		padding-top:8px;
 	}
+	/* Popover docs
+	-------------------------------------------------- */
+	.popover-well {
+		background-color:white;
+		border:0;
+	 /* min-height: 160px; */
+	}
+	.popover-well .popover {
+	  display: inline;
+	}
+	.popover-well .popover-wrapper {
+	  width: 640px;
+	  height: 160px;
+	  float: left;
+	  margin-left: 55px;
+	  position: relative;
+	}
+	.popover-well .popover-menu-wrapper {
+	  height: 80px;
+	}
     </style>
 
 
     <!-- Le fav and touch icons -->
+<!--
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	<script type="text/javascript" src="js/cssrefresh.js"></script>
+-->
   </head>
 
   <body>
@@ -128,24 +153,104 @@
 	          <h1>Consultation<small></small></h1>
 	        </div>
 	        <div class="row">
-	          <div id="maincontent" class="span10"> <!-- main content -->
-				
-				<div class="alert-message info">
-
-				  	<p><strong>Consultation in progress...</strong></p>
+	          <div id="maincontent" class="span10"> <!-- main content -->	
+				<div class="alert-message success">
+				  	<p><strong>Status : Live</strong> - Consultation in progress...</p>
 				</div>
-					
-		      <form action="payment.html" id="signup">
-				<fieldset>
-					<legend>Basics</legend>
-	 
-				  </form>
+				
+				<ul class="tabs">
+				  <li class="active"><a href="#">Chat Message</a></li>
+				  <li><a href="#">Picture</a></li>
+				  <li><a href="#">Video</a></li>
+				</ul>
+	
+	           <div class="input">
+	              <textarea class="span8" id="textarea2" name="textarea2" rows="3" placeholder="write your message...."></textarea>
+   				  <a href="#" class="btn primary small">send</a>
+				</div>
+				<br/>
+				
+				<div class="row">
+				<div class="span8">
+					<div class="popover-well">
+				    	<div class="popover-wrapper">
+				        	<div class="popover right">
+				            	<div class="arrow"></div>
+				            		<div class="inner">
+				              			<h5 class="title">Sacha Guyon:</h5>
+				              			<div class="content">
+				                			<p>Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				              			</div>
+				            		</div>
+				          		</div>
+				        	</div>
+				    	</div>
+				    </div>
+				</div>
+				
+				<div class="row">
+				<div class="span6 offset2">
+					<div class="popover-well">
+						<div class="popover-wrapper">
+							<div class="popover left">
+								<div class="arrow"></div>
+								<div class="inner">
+									<h5 class="title">
+										Doctor John Doe:
+									</h5>
+									<div class="content">
+										<p>
+											Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="span8">
+					<div class="popover-well">
+						<div class="popover-wrapper">
+							<div class="popover right">
+								<div class="arrow"></div>
+								<div class="inner">
+									<h5 class="title">
+										Sacha Guyon:
+									</h5>
+									<div class="content">
+										<p>
+											picture upload:<br>
+											<img class="thumbnail" src="http://placehold.it/250x200" width="250" height="200" alt="">
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="row">
+<p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</p>
+				</div>
+	
 
 	          </div> <!-- /main content -->
 	    
 	      	<div id="sidebar" class="span4"> <!-- side bar -->
 		
-				<h4>Our doctors:</h4>
+				<h4>Consultation summary</h4>
 				
 				<h5><span class="label success">online</span> Oliver Tang</h5>
 				<div class="row">
